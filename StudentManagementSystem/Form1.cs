@@ -54,17 +54,25 @@ namespace StudentManagementSystem
 
         private void PopulateStudentList(List<Student> students)
         {
+            // clear box BEFORE repopulating it because
+            // this adds ALL the students not just the new one
+            listBoxStudents.Items.Clear();
             foreach (Student s in students)
             {
+                // add whole object
+                // display is in Studnt class under ToString override
                 listBoxStudents.Items.Add(s);
             }
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            //ToDo:
-            //Create a form to add student to DB
+            //Show add student form
+            AddStudentFrm addForm = new AddStudentFrm();
+            addForm.ShowDialog();
             //after student is added place in listbox
+            List<Student> allStudents = StudentDB.GetAllStudents();
+            PopulateStudentList(allStudents);
         }
 
         private void btnUpdateStudent_Click(object sender, EventArgs e)

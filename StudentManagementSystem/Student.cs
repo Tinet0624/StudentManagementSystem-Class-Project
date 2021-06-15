@@ -68,6 +68,14 @@ namespace StudentManagementSystem
         {
             throw new NotImplementedException(); // method stub
         }
-        
+
+        /// <summary>
+        /// Overrides the ToString to display only the Full Name
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString() // only see FullName
+        {
+            return FullName;
+        }
     }
 }

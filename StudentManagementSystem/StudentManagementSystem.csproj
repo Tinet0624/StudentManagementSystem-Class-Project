@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudentFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentFrm.Designer.cs">
+      <DependentUpon>AddStudentFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +64,9 @@
     <Compile Include="Student.cs" />
     <Compile Include="StudentDB.cs" />
     <Compile Include="Validator.cs" />
+    <EmbeddedResource Include="AddStudentFrm.resx">
+      <DependentUpon>AddStudentFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
